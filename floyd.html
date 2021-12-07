@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<title>Graph_academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css ">
+<link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+<script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+  <script src="http://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.9/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript">
+function JSalert_e(){
+
+	swal("Try again!", "Mistakes are the stepping stones to success", "error");
+}
+
+
+
+function JSalert_s(){
+
+	swal("Congrats!", "One step closer to mastery", "success");
+}
+
+
+function JSalert_s_2(){
+
+	swal("Congrats!", "The MST would consist of BD, DE, DC and CA", "success");
+}
+</script>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.boxed {
+  border: 1px solid green ;
+}
+
+.bgimg {
+  background-position: 50% 44%;
+  background-size: 100%;
+    background-repeat: no-repeat;
+
+  background-image: url("https://cs.stanford.edu/sites/default/files/hhfffhcc.png");
+  min-height: 75%;
+    min-width: 55%;
+}
+
+.menu {
+  display: none;
+}
+
+mark {
+  background-color: dodgerblue;
+  color: white;
+}
+
+</style>
+
+
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button">Graph Academy</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-middle w3-center">
+    <span class="w3-padding w3-black w3-opacity-min" style="font-size:90px">Floyd-Warshall</span>
+  </div>
+  
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px" >
+  <br><br><br>
+    <center><h5><mark>What does it do ?</mark></h5></center><br>
+    
+    <p>The Floyd Warshall algorithm is used to find the shortest path between any pair of vertices in a directed graph.</p>
+
+
+  
+      <br><br>
+ <center><h5><mark>What's the idea ?</mark></h5></center><br><br>
+ 
+     <p>
+     1) Create a double dimensional V*V array to help you store the distances between every pair of vertices. <br><br>
+     2) The distances from a point to itself will be zero, so the values along the diagonal can be set to zero. For all the vertices with a direct edge between them, their distance can be set to the value of the edge weight. Else, initialize the distance between the points to infinity.<br><br>
+     
+     3) Now for each trio of vertices i, j, and k, there are two possibilities-<br>
+          - The point k is a part of the shortest path between i and j
+          - The point k is not present in the shorest path between i and j
+      <br><br>
+     
+     4) So if the value of dist[i][k] + dist[k][j] < dist[i][j], ie. the path between i and j going through k is shorter and better than the current path, then the value of dist[i]ij] can be updated to the smaller value.<br><br>
+     
+     5) For each value of k, we go through every value of i and j, and at the end of these iterations, have the shortest path between all pairs stored in the array.<br><br>
+          
+     
+         
+     
+          
+          
+     
+          
+          
+     
+    
+     <div class="wrapper bg-white rounded">
+
+    <div class="content"> <a href="#"></span></a>
+                          <p class="text-muted">Test yourself</p>
+        </p>
+
+        <p class="text-justify h5 pb-2 font-weight-bold">Consider the following graph..<br><br>
+      <img height="170" src="https://i.imgur.com/NfaDbxW.png">
+      <p>
+        <p class="text-justify h5 pb-2 font-weight-bold">
+      The length of the shortest path from vertex 1 to vertex 2, 3, 4 respectively would be</p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_e()"> 3, 6, 5 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_s()"> -1, -2, 0 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 0, 2, 1 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 4, 5, 5 <input type="radio" name="radio">  </label> </div>
+        
+        
+        <p class="text-justify h5 pb-2 font-weight-bold">If the number of vertices is 5, how many times will we have to check if a shorter path is available ?<br></p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_e()"> 25 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()">  5 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_s()"> 125 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 10 <input type="radio" name="radio">  </label> </div>
+        
+    </div> 
+</div>
+
+
+
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+
+</body>
+</html>
+

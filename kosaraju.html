@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<title>Graph_academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css ">
+<link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+<script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+  <script src="http://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.9/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript">
+function JSalert_e(){
+
+	swal("Try again!", "Mistakes are the stepping stones to success", "error");
+}
+
+
+
+function JSalert_s(){
+
+	swal("Congrats!", "One step closer to mastery", "success");
+}
+
+
+function JSalert_s_2(){
+
+	swal("Congrats!", "The MST would consist of BD, DE, DC and CA", "success");
+}
+</script>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.boxed {
+  border: 1px solid green ;
+}
+
+.bgimg {
+  background-position: 50% 14%;
+  background-size: 150%;
+    background-repeat: no-repeat;
+
+  background-image: url("https://www.cs.jhu.edu/~kosaraju/kosaraju.gif");
+  min-height: 75%;
+    min-width: 55%;
+}
+
+.menu {
+  display: none;
+}
+
+mark {
+  background-color: dodgerblue;
+  color: white;
+}
+
+</style>
+
+
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button">Graph Academy</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-middle w3-center">
+    <span class="w3-padding w3-black w3-opacity-min" style="font-size:90px">Kosaraju's</span>
+  </div>
+  
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px" >
+  <br><br><br>
+    <center><h5><mark>What does it do ?</mark></h5></center><br>
+    
+    <p>Kosaraju's algorithm is used to find strongly connected components of a directed graph.</p>
+
+
+   <center><h5><mark>What are strongly connected components ?</mark></h5></center><br><br>
+   
+   <p>A graph is said to be strongly connected if every vertex of the graph is reachable from every other vertex.</p>
+   
+   
+   <center><img height="250" src="https://miro.medium.com/max/441/1*5mfGvrARNPwhh7yNlWxEnQ.png"></center>
+   <br>
+   For instance, the above graph is not strongly connected as there is no way to reach vertex 4 from vertex 5, or reach vertex 3 from vertex 4. However, 1, 2 and 3 together would be a strongly connected component as there exists a path between any pair of those vertices.
+      <br><br>
+ <center><h5><mark>What's the idea ?</mark></h5></center><br><br>
+ 
+     <p>
+     1) Initialize an empty stack S, and choosing any starting point, begin recursive depth first search for every node that can be reached from that vertex.<br><br>
+     
+     2) If a vertex X is being considered, check if all of its adjacent vertices have been visited. If they have, then trace back to the vertex from where you came to X and do the same. If not, then go the next adjacent vertex and continue. DO so until all vertices are visited and pushed into the stack<br><br>
+     
+     3) Take the transpose of the graph by switching the directions of the edges.<br><br>
+     
+     4) Now pop the nodes from the stack S one by one. Use dfs again to find all the vertices which can be visited from that particular node. The group of the node along with the vertices which it can visit will form a strongly connected component.<br>
+     If a newly popped vertex is already part of a previously formed strongly connected component, its has already been placed, so move on to the next vertex in the stack.
+     
+         
+     
+          
+          
+     
+          
+          
+     
+    
+     <div class="wrapper bg-white rounded">
+
+    <div class="content"> <a href="#"></span></a>
+                          <p class="text-muted">Test yourself</p>
+        </p>
+
+        <p class="text-justify h5 pb-2 font-weight-bold">Consider the following graph..<br><br>
+      <img height="170" src="https://i.imgur.com/ZRdb6Mh.png">
+      <p>
+        <p class="text-justify h5 pb-2 font-weight-bold">
+      Which four vertices will be pushed onto the stack first ? (in order of first pushed to last pushed)</p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_s()"> 3, 6, 5, 4 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 0, 1, 2, 3 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 3, 2, 1, 4 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 8, 7, 6, 4 <input type="radio" name="radio">  </label> </div>
+        
+        
+        <p class="text-justify h5 pb-2 font-weight-bold">Which of the following pairs will belong to the same strongly connected component ?<br></p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_e()"> 3, 4 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()">  7, 8 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_s()"> 5, 6 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 2, 4 <input type="radio" name="radio">  </label> </div>
+        
+    </div> 
+</div>
+
+
+
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+
+</body>
+</html>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<title>Graph_academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css ">
+<link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+<script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+  <script src="http://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.9/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript">
+function JSalert_e(){
+
+	swal("Try again!", "Mistakes are the stepping stones to success", "error");
+}
+
+
+
+function JSalert_s(){
+
+	swal("Congrats!", "One step closer to mastery", "success");
+}
+
+
+function JSalert_s_2(){
+
+	swal("Congrats!", "The MST would consist of BD, DE, DC and CA", "success");
+}
+</script>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.boxed {
+  border: 1px solid green ;
+}
+
+.bgimg {
+  background-position: 50% 28%;
+  background-size: 100%;
+    background-repeat: no-repeat;
+
+  background-image: url("https://i0.wp.com/www.german-way.com/wp-content/uploads/2016/03/Konrad_Zuse.gif?resize=211%2C262&ssl=1");
+  min-height: 75%;
+    min-width: 55%;
+}
+
+.menu {
+  display: none;
+}
+
+mark {
+  background-color: dodgerblue;
+  color: white;
+}
+
+</style>
+
+
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button">Graph Academy</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-middle w3-center">
+    <span class="w3-padding w3-black w3-opacity-min" style="font-size:90px">BFS</span>
+  </div>
+  
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px" >
+  <br><br><br>
+    <center><h5><mark>What does it do ?</mark></h5></center><br>
+    
+    <p>The breadth first search algorithm is used for traversing all the nodes of a given graph.</p>
+
+<br>
+ <center><h5><mark>What's the idea ?</mark></h5></center><br><br>
+ 
+     <p>
+     1) Initialize an empty queue and pick any node of the graph to be the starting current node.
+     <br><br>
+     2) Insert all the adjacent nodes of the current vertex and put them into the queue.<br><br>
+     3) Next visit the node on top of the queue, and that will be the new current vertex.<br>
+     Pop the current vertex from the queue<br><br>
+     4) Repeat step 2 on the new current vertex.<br><br>
+     5) If no more unvisited adjacent vertices to the current node exist, move on to the next element of the queue.<br><br>
+     6) Keep repeating steps 2 to 5 until all the nodes of the given graph have been visited.
+     
+     <br>
+     
+     
+             
+         
+     
+          
+          
+     
+          
+          
+     
+    
+     <div class="wrapper bg-white rounded">
+
+    <div class="content"> <a href="#"></span></a>
+                          <p class="text-muted">Test yourself</p>
+        </p>
+
+        <p class="text-justify h5 pb-2 font-weight-bold">Consider the following graph..<br><br>
+      <img height="170" src="https://i.imgur.com/TYG7Bbh.png">
+      <p>
+        <p class="text-justify h5 pb-2 font-weight-bold">
+      Which of the following is a valid order node visiting order generated using bfs ? (beginning from A) </p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_e()"> A, B, S, C, G, D, E, F, H <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_s()"> A, B, S, C, G, D, E, F, H <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> A, B, S, C, G, D, E, F, H <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> A, B, S, C, G, D, E, F, H <input type="radio" name="radio">  </label> </div>
+        
+        
+        <p class="text-justify h5 pb-2 font-weight-bold">If the tie-breaker in deciding which unvisited adjacent edge should be inserted into the queue first is alphabetical order, in what order will the vertices be inserted (A is the start node). <br></p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_s()"> B, S, C, G, D, E, F, H <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> B, S, G, C, D, E, F, H <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> B, S, C, D, E, F, G, H <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> B, S, C, D, E, F, H, G <input type="radio" name="radio">  </label> </div>
+        
+    </div> 
+</div>
+
+
+
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+
+</body>
+</html>
+

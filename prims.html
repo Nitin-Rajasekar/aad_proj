@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<title>Graph_academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css ">
+<link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+<script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+  <script src="http://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.9/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript">
+function JSalert_e(){
+
+	swal("Try again!", "Mistakes are the stepping stones to success", "error");
+}
+
+
+
+function JSalert_s(){
+
+	swal("Congrats!", "One step closer to mastery", "success");
+}
+
+
+function JSalert_s_2(){
+
+	swal("Congrats!", "The MST would consist of BD, DE, DC and CA", "success");
+}
+</script>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.bgimg {
+  background-position: 50% 35%;
+  background-size: 110%;
+    background-repeat: no-repeat;
+
+  background-image: url("https://alchetron.com/cdn/vojtch-jarnk-d6805baf-4d09-402b-81eb-a999a4a98cc-resize-750.jpg");
+  min-height: 75%;
+    min-width: 55%;
+}
+
+.menu {
+  display: none;
+}
+
+mark {
+  background-color: dodgerblue;
+  color: white;
+}
+
+</style>
+
+
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button">Graph Academy</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-middle w3-center">
+    <span class="w3-padding w3-black w3-opacity-min" style="font-size:90px">Prim's</span>
+  </div>
+  
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px" >
+  <br><br><br>
+    <center><h5><mark>What does it do ?</mark></h5></center><br>
+    <p>Prim's algorithm is used to help one find the minimum spanning tree of a graph.</p>
+    
+     <br><br><br>
+    <center><h5><mark>A minimum spanning tree ?</mark></h5></center><br><br>
+    <p>A minimum spanning tree is a subset of a connected undirected graph that connects all vertices, and has the minmum possible weight of any subset that satisfies these conditions.</p>
+    
+ <center><h5><mark>What's the idea ?</mark></h5></center><br><br>
+ 
+     <p>
+     1) Choose a starting vertex A, and add it to the MST.<br><br>
+     2) Choose the lowest-weighted edge which A is a part of (connecting it to an unvisited node), say AB, such that including it in the MST will not lead to a cycle.<br>
+        Add it to the MST.<br><br>
+     3) Now similarly consider the lowest weighted edge which any of the already included vertices (A and B here) are a part of, say BC (again, no cycle).<br>
+        Add it to the MST as well.<br><br>
+     4) Now do the same thing with the updated vertex set, and so on..until all the vertices have been accounted for.<br><br>
+     
+          
+          
+     
+          
+          
+     
+    
+     <div class="wrapper bg-white rounded">
+    <div class="content"> <a href="#"></span></a>
+       <p class="text-muted">Test yourself</p>
+        </p>
+        
+        <p class="text-justify h5 pb-2 font-weight-bold">Consider the following graph..<br>
+      <img src="https://i.imgur.com/VHFmi1S.png">
+      <p>
+        <p class="text-justify h5 pb-2 font-weight-bold">Say we start with vertex..B<br>
+      Which three edges would you add to the MST first ?</p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_e()"> BD, DE, DC <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_s()">  BD, DE, EC <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> BC, CA, CE <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> BD BC DE <input type="radio" name="radio">  </label> </div>
+        
+        
+        <p class="text-justify h5 pb-2 font-weight-bold">What would be the length of the resultant MST ?<br></p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_e()"> 14 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()">  7 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_s_2()"> 10 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> 12 <input type="radio" name="radio">  </label> </div>
+        
+    </div> 
+</div>
+
+
+
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+
+</body>
+</html>
+

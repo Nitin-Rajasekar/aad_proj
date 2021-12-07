@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>Graph_academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css ">
+<link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+<script src="alert/dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="alert/dist/sweetalert.css">
+  <script src="http://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.9/dist/sweetalert2.all.min.js"></script>
+  <script type="text/javascript">
+function JSalert_e(){
+
+	swal("Try again!", "Mistakes are the stepping stones to success", "error");
+}
+
+
+
+function JSalert_s(){
+
+	swal("Congrats!", "One step closer to mastery", "success");
+}
+
+
+function JSalert_s_2(){
+
+	swal("Congrats!", "The MST would consist of BD, DE, DC and CA", "success");
+}
+</script>
+<style>
+body, html {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.boxed {
+  border: 1px solid green ;
+}
+
+.bgimg {
+  background-position: 50% 59%;
+  background-size: 100%;
+    background-repeat: no-repeat;
+
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRygWAKfN15CmMoVDntsZlu1f7y94VdDl6Qx6u5qkv4hdCLUX14rmVO5l9JTjeREYMigHM&usqp=CAU");
+  min-height: 75%;
+    min-width: 55%;
+}
+
+.menu {
+  display: none;
+}
+
+mark {
+  background-color: dodgerblue;
+  color: white;
+}
+
+</style>
+
+
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button">Graph Academy</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-middle w3-center">
+    <span class="w3-padding w3-black w3-opacity-min" style="font-size:90px">Kruskal's</span>
+  </div>
+  
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px" >
+  <br><br><br>
+    <center><h5><mark>What does it do ?</mark></h5></center><br>
+    
+    <p>Kruskal's algorithm helps compute the minimum spanning tree of a graph.</p>
+      <br><br>
+      <center><h5><mark>A minimum spanning tree ?</mark></h5></center><br>
+    <p>A minimum spanning tree is a subset of a connected undirected graph that connects all vertices, and has the minmum possible weight of any subset that satisfies these conditions.</p>
+     
+
+  <br>  
+ <center><h5><mark>What's the idea ?</mark></h5></center><br><br>
+ 
+     <p>
+     1) Arrange the edges of he graph in non-decreasing order.<br><br>
+     2) Consider each edge in that order individually.<br><br>
+     3) If including the edge in the MST would create a cycle, ignore it and move on the next edge.
+     
+
+     <br><br>
+     4) If not, include it in the MST and move on to the next edge.<br><br>
+     5)Terminate when all the edges have been considered.
+     <br>
+          
+          
+     
+          
+          
+     
+    
+     <div class="wrapper bg-white rounded">
+
+    <div class="content"> <a href="#"></span></a>
+                          <p class="text-muted">Test yourself</p>
+        </p>
+
+        <p class="text-justify h5 pb-2 font-weight-bold">Consider the following graph..<br>
+      <img height="270" src="https://i.imgur.com/XlFRhT6.png">
+      <p>
+        <p class="text-justify h5 pb-2 font-weight-bold">
+      After three iterations, which are the edges which have been included into the MST ?</p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_s()"> V7-V6, ,V2-V8, V5-V6 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> V7-V6, ,V2-V8, V5-V4 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> V7-V6, ,V2-V8, V5-V2 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> V7-V6, ,V1-V0, V0-V7 <input type="radio" name="radio">  </label> </div>
+        
+        
+        <p class="text-justify h5 pb-2 font-weight-bold">Which of the following edges will be included in the resulting MST ?<br></p>
+        <div class="options py-3"> <label class="rounded p-2 option" onclick="JSalert_e()"> V8-V7 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()">  V1-V2 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_e()"> V5-V3 <input type="radio" name="radio">  </label> <label class="rounded p-2 option" onclick="JSalert_s()"> V3-V4 <input type="radio" name="radio">  </label> </div>
+        
+    </div> 
+</div>
+
+
+
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+
+</body>
+</html>
+
